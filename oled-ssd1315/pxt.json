@@ -1,0 +1,11 @@
+{
+    "name": "oled-ssd1315",
+    "version": "0.0.1",
+    "description": "Extension MakeCode untuk OLED SSD1315 (teks saja)",
+    "dependencies": {},
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": [],
+    "public": true
+}

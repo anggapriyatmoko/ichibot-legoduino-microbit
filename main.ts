@@ -10,6 +10,11 @@ namespace digitalread {
      */
     //% block="baca digital %pin"
     //% blockId=digitalread_readPin
+    //% pin.fieldEditor="gridpicker"
+    //% pin.fieldOptions.columns=3
+    //% pin.defl=DigitalPin.P0
+    //% pin.shadow="digitalPin"
+    //% pin.shadowOptions="{\"pins\":[\"P0\",\"P1\",\"P2\"]}"
     export function readPin(pin: DigitalPin): number {
         return pins.digitalReadPin(pin);
     }

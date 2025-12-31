@@ -1,0 +1,11 @@
+{
+    "name": "microbit-digital-read",
+    "version": "0.0.1",
+    "description": "Extension MakeCode untuk membaca data digital pada micro:bit.",
+    "dependencies": {},
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": [],
+    "public": true
+}

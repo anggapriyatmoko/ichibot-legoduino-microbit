@@ -65,16 +65,14 @@ namespace SSD1315 {
      */
     //% block="tampilkan teks %text|pada x %x|y %y"
     export function showText(text: string, x: number, y: number) {
-        // Fungsi ini hanya contoh, implementasi font 5x8 sederhana
-        // Untuk demo: hanya karakter ASCII 32-127
-        const font: Buffer = pins.createBufferFromArray([
-            // ... font data 5x8 ...
-        ]);
-        for (let i = 0; i < text.length; i++) {
-            let c = text.charCodeAt(i);
-            if (c < 32 || c > 127) c = 32;
-            // Kirim data font ke SSD1315 (implementasi font di-sederhanakan)
-            // ...
-        }
+        // Implementasi minimal agar blok muncul di MakeCode
+        // (Belum menampilkan font, hanya validasi blok)
+        // TODO: Tambahkan font 5x8 dan implementasi penuh
+        let dummy = 0x41; // ASCII 'A'
+        // Contoh: kirim satu byte data ke SSD1315 agar tidak error build
+        let buf = pins.createBuffer(2);
+        buf[0] = 0x40;
+        buf[1] = dummy;
+        pins.i2cWriteBuffer(SSD1315_ADDR, buf);
     }
 }
